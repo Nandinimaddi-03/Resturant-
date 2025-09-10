@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Starlight Hospital — Quality Care</title>
+  <meta name="description" content="Starlight Hospital - compassionate, modern healthcare. Book appointments, meet our doctors, and find departments." />
+  <style>
+    :root{
+      --bg:#f6f9fb;
+      --card:#ffffff;
+      --accent:#0b6efd;
+      --muted:#6b7280;
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(15,23,42,0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
+
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(11,110,253,0.08);color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;margin-top:28px}
+    .hero-card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero h1{margin:0 0 8px;font-size:28px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none}
+
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:linear-gradient(180deg,#fff,#fbfdff);padding:12px;border-radius:12px;flex:1;text-align:center;box-shadow:0 4px 14px rgba(2,6,23,0.04)}
+    .stat b{display:block;font-size:18px}
+
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .service{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted)}
+
+    .doctors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .doctor{background:var(--card);padding:16px;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
+    .avatar{width:84px;height:84px;border-radius:50%;display:inline-block;background:#eef2ff;line-height:84px;font-weight:600}
+    .doc-name{margin:10px 0 6px;font-weight:600}
+    .doc-role{color:var(--muted);font-size:14px}
+
+    .appointment{background:linear-gradient(180deg,#fff,#fcfeff);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    form{display:grid;gap:10px}
+    label{font-size:13px;color:var(--muted)}
+    input,select,textarea{padding:10px;border-radius:8px;border:1px solid #e6edf3;font-size:15px}
+    button{background:var(--accent);color:white;padding:10px 14px;border:none;border-radius:10px;cursor:pointer}
+
+    footer{margin-top:36px;padding:18px;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .services,.doctors{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .services,.doctors{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SH</div>
+        <div>
+          <div style="font-weight:700">Starlight Hospital</div>
+          <div style="font-size:13px;color:var(--muted)">Compassion • Excellence • Care</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointment" class="cta">Book Appointment</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Comprehensive healthcare for the whole family</h1>
+          <p>24/7 emergency, experienced specialists, modern diagnostics and personalised treatment plans — all under one roof.</p>
+          <a class="cta" href="#appointment">Book an appointment</a>
+
+          <div class="stats">
+            <div class="stat"><span style="color:var(--muted);font-size:13px">Years serving</span><b>18+</b></div>
+            <div class="stat"><span style="color:var(--muted);font-size:13px">Qualified doctors</span><b>120+</b></div>
+            <div class="stat"><span style="color:var(--muted);font-size:13px">Satisfied patients</span><b>25k+</b></div>
+          </div>
+
+          <section id="services" style="margin-top:18px">
+            <h2 style="font-size:18px;margin:8px 0">Our departments</h2>
+            <div class="services">
+              <article class="service"><h3>Emergency</h3><p>24/7 critical care, triage and life support.</p></article>
+              <article class="service"><h3>Cardiology</h3><p>Advanced heart care—consultations, cath lab and rehab.</p></article>
+              <article class="service"><h3>Orthopedics</h3><p>Joint replacement, sports medicine and trauma surgery.</p></article>
+              <article class="service"><h3>Pediatrics</h3><p>Child health, immunizations and neonatal care.</p></article>
+              <article class="service"><h3>Radiology</h3><p>X‑ray, CT, MRI and ultrasound with expert reporting.</p></article>
+              <article class="service"><h3>Outpatient</h3><p>Easy consultations, follow-ups and wellness checks.</p></article>
+            </div>
+          </section>
+        </div>
+
+        <aside class="hero-card appointment" id="appointment" aria-labelledby="bookHeading">
+          <h2 id="bookHeading" style="margin-top:0">Book an appointment</h2>
+          <form id="appointmentForm" novalidate>
+            <div>
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required placeholder="Your full name" />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" required placeholder="+91 98765 43210" />
+            </div>
+            <div>
+              <label for="dept">Department</label>
+              <select id="dept" name="dept" required>
+                <option value="">Choose department</option>
+                <option>Emergency</option>
+                <option>Cardiology</option>
+                <option>Orthopedics</option>
+                <option>Pediatrics</option>
+                <option>Radiology</option>
+                <option>Outpatient</option>
+              </select>
+            </div>
+            <div>
+              <label for="date">Preferred date</label>
+              <input id="date" name="date" type="date" required />
+            </div>
+            <div>
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Brief reason for visit"></textarea>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button type="submit">Request appointment</button>
+              <div id="formMsg" style="color:var(--muted);font-size:13px"></div>
+            </div>
+          </form>
+
+          <script>
+            (function(){
+              const form = document.getElementById('appointmentForm');
+              const msg = document.getElementById('formMsg');
+              form.addEventListener('submit', function(e){
+                e.preventDefault();
+                // Simple client-side validation
+                const name = form.name.value.trim();
+                const phone = form.phone.value.trim();
+                const dept = form.dept.value;
+                const date = form.date.value;
+                if(!name || !phone || !dept || !date){
+                  msg.textContent = 'Please fill required fields.';
+                  return;
+                }
+                // Here you would normally send data to server via fetch/XHR.
+                msg.style.color = 'green';
+                msg.textContent = 'Appointment requested. We will contact you soon.';
+                form.reset();
+                setTimeout(()=> msg.textContent = '', 5000);
+              })
+            })();
+          </script>
+        </aside>
+      </section>
+
+      <section style="margin-top:20px">
+        <h2 id="doctors">Meet our doctors</h2>
+        <div class="doctors">
+          <div class="doctor">
+            <div class="avatar">AR</div>
+            <div class="doc-name">Dr. Asha Reddy</div>
+            <div class="doc-role">Cardiologist — MD</div>
+            <div style="margin-top:8px;color:var(--muted);font-size:13px">Mon, Wed, Fri • 10:00–14:00</div>
+          </div>
+          <div class="doctor">
+            <div class="avatar">VK</div>
+            <div class="doc-name">Dr. Vikram Kapoor</div>
+            <div class="doc-role">Orthopedic Surgeon — MS</div>
+            <div style="margin-top:8px;color:var(--muted);font-size:13px">Tue, Thu • 11:00–16:00</div>
+          </div>
+          <div class="doctor">
+            <div class="avatar">NL</div>
+            <div class="doc-name">Dr. Nita Lal</div>
+            <div class="doc-role">Pediatrics — DCH</div>
+            <div style="margin-top:8px;color:var(--muted);font-size:13px">Mon–Sat • 09:00–12:00</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:20px">
+        <div class="hero-card" style="display:flex;gap:16px;align-items:center">
+          <div style="flex:1">
+            <h3 style="margin:0">Contact & location</h3>
+            <p style="color:var(--muted);margin:8px 0">123 Health Avenue, Green Park, Cityname — Open 24/7</p>
+            <p style="margin:6px 0"><strong>Phone:</strong> +91 98765 43210</p>
+            <p style="margin:6px 0"><strong>Email:</strong> info@starlighthospital.example</p>
+          </div>
+          <div style="width:300px;height:160px;border-radius:10px;background:#eef7ff;display:flex;align-items:center;justify-content:center;color:var(--muted)">Map placeholder</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Starlight Hospital — All rights reserved</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
